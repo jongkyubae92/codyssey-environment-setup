@@ -1,0 +1,10 @@
+services:
+# 1. 웹 서버 서비스
+  web:
+    image: nginx:alpine
+    ports:
+      - "8081:80"
+
+  # 2. 보조 서비스 (자신의 컨테이너 정보를 응답하는 서비스)
+  api:
+    image: traefik/whoami
